@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+	
+    {% if not session.logged_in %}
+    	<center>
+    	<img src="\static\images\main.jpg" style="height:400px; width:1000px ;margin-top: 50px">
+    	</center>
+    	<br><br><br><br><br><br><br><br>
+    	<center><h1 style="color:black;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Log in to learn the courses!!</h1></center>
+
+	{% else %}
+	<center>
+		<a href="/courses"><button type="button"  style="background-color:lightblue; margin-top:70px;width:50%;font-size: 30px;">Click here to learn courses!</button></a>
+	</center>
+	{% endif %}
+{% endblock %}

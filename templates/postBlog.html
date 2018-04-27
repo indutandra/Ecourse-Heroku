@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="well" style = "background-color:linear-gradient(to bottom right, lightblue,white)">
+	<form action="{{ url_for('postBlog') }}" method="post" style = "background-color:linear-gradient(to bottom right, lightblue,white)">
+		
+		<center>
+			<br><br>
+			<textarea style="font-size: 20px;" rows="5" cols="50" name="blog_Title" placeholder="Enter blog title here..."></textarea>
+			<br><br>
+			<textarea style="font-size: 20px;" rows="10" cols="50" name="blog_Message" placeholder="Enter blog message here..."></textarea>
+			<br><br>
+			<input style="font-size: 20px;" type="submit">
+			<br><br>
+		</center>
+	</form>
+</div>
+{% endblock %}
