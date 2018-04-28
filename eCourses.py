@@ -5,6 +5,8 @@ from sqlalchemy import Table, DateTime, desc
 import datetime
 import sys
 from datetime import datetime
+from flask_validator import ValidateInteger, ValidateString, ValidateEmail
+
 # from app import db
 
 app = Flask(__name__)
@@ -20,7 +22,8 @@ class LoginDetails(db.Model):
 	email = db.Column(db.String(100), primary_key=True)
 	name = db.Column(db.String(200))
 	password = db.Column(db.String(240))
-	phone = db.Column(db.String(20))
+	# phone = db.Column(db.String(20))
+	phone = db.Column(db.Integer())
 
 	def __init__(self, name, email, password, phone):
 		self.email = email
